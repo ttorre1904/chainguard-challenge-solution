@@ -1,0 +1,10 @@
+image: hello:e-chainguard
+image_id: sha256:18508429b30f42828661aa9c6788716f6a4c5e399b73515ea979a0461214e795   # local image ID; the registry digest exists only after a push
+size_bytes: 35830913
+layers: 3
+user: '65532'  (empty = root)
+entrypoint: ["/hello-server"]  cmd: null
+shell_present: no
+syft_total_packages: 26
+syft_os_packages: 5
+libc_packages: 
