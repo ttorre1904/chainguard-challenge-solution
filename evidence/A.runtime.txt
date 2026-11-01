@@ -1,0 +1,22 @@
+label: A   image: hello:a-baseline   date: 2026-11-01T18:45:24Z
+extra docker run flags: 
+--- endpoint
+HTTP 200
+Hello World!
+--- configured user: '' (empty = image default)
+--- docker host config
+ReadonlyRootfs=false CapDrop=<no value> SecurityOpt=<no value> Memory=0 PidsLimit=<no value> NanoCpus=0
+--- what the Linux kernel says about the app process (host PID 23704)
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+CapInh:	0000000000000000
+CapPrm:	00000000a80425fb
+CapEff:	00000000a80425fb
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	2
+--- shell exec attempt
+shell works
+--- time to stop (graceful SIGTERM handling)
+real	0m0.125s
