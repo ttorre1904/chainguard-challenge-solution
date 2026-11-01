@@ -1,0 +1,20 @@
+date_utc: 2026-11-01T17:59:39Z
+image: hello:b-multistage
+--- grype version
+Application:         grype
+Version:             0.121.0
+BuildDate:           2026-10-19T20:26:34Z
+GitCommit:           afe2742527d98d822da06c9f32eed86fe3d193e0
+--- grype db status
+Path:      /home/ubuntu/.cache/grype/db/6/vulnerability.db
+Schema:    v6.1.10
+Built:     2026-11-01T06:20:12Z
+From:      https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-11-01T00:24:34Z_1793514012.tar.zst?checksum=sha256%3Ad0e1af9e6491440e1a671d0a0aafc32c5c7cb5cda787dcec3482799ef298f31c
+Status:    valid
+--- trivy version
+Version: 0.76.1
+Vulnerability DB:
+  Version: 2
+  UpdatedAt: 2026-11-01 13:02:34.671548954 +0000 UTC
+cmd: grype hello:b-multistage -o json > evidence/B.grype.json
+cmd: trivy image --quiet --format json --output evidence/B.trivy.json hello:b-multistage

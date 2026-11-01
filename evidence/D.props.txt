@@ -1,0 +1,10 @@
+image: hello:d-mods-bumped
+image_id: sha256:3f729573193bf10920d73d5602224b70cfeb165482dde922d9259e309e391637   # local image ID; the registry digest exists only after a push
+size_bytes: 44306227
+layers: 2
+user: ''  (empty = root)
+entrypoint: ["/hello-server"]  cmd: null
+shell_present: yes
+syft_total_packages: 37
+syft_os_packages: 16
+libc_packages: musl

@@ -1,0 +1,11 @@
+# Variant A: single-stage. Deliberately "typical": everything in one image.
+ARG GO_VERSION=1.18
+FROM golang:${GO_VERSION}
+
+WORKDIR /app
+COPY . .
+RUN go mod download
+RUN CGO_ENABLED=0 go build -o /app/hello-server .
+
+EXPOSE 8080
+CMD ["/app/hello-server"]

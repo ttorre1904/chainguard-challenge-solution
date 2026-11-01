@@ -1,0 +1,10 @@
+image: hello:b-multistage
+image_id: sha256:99f356dca086597f94484bcdcb0e94cf3b3334ac8b7d93fbea11b03b6dc0a9f6   # local image ID; the registry digest exists only after a push
+size_bytes: 28424592
+layers: 2
+user: ''  (empty = root)
+entrypoint: ["/hello-server"]  cmd: null
+shell_present: yes
+syft_total_packages: 33
+syft_os_packages: 16
+libc_packages: musl

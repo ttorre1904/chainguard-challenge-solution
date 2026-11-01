@@ -1,0 +1,10 @@
+image: hello:c-go-updated
+image_id: sha256:4d888563e7ea724b03924c6114bdbc0f9a9641c4de0b9428281de1379e1a8e0d   # local image ID; the registry digest exists only after a push
+size_bytes: 31572057
+layers: 2
+user: ''  (empty = root)
+entrypoint: ["/hello-server"]  cmd: null
+shell_present: yes
+syft_total_packages: 33
+syft_os_packages: 16
+libc_packages: musl

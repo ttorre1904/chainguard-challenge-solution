@@ -1,0 +1,17 @@
+# B-F and side-by-sides: multi-stage. Only the three ARGs change from step to step.
+ARG GO_VERSION=1.18
+ARG BUILD_IMAGE=golang:${GO_VERSION}
+ARG RUNTIME_IMAGE=alpine:3
+
+FROM ${BUILD_IMAGE} AS build
+ENV GOTOOLCHAIN=local
+WORKDIR /tmp/src
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 go build -o /tmp/hello-server .
+
+FROM ${RUNTIME_IMAGE}
+COPY --from=build /tmp/hello-server /hello-server
+EXPOSE 8080
+ENTRYPOINT ["/hello-server"]
