@@ -1,3 +1,5 @@
 step,scanner,critical,high,medium,low,other,total,fixable,os_pkgs,go_modules,go_stdlib
 A,grype,106,647,656,89,843,2341,1108,1823,135,383
 A,trivy,139,2733,8798,2427,47,14144,7209,12021,63,2060
+B,grype,6,41,31,1,0,79,76,3,17,59
+B,trivy,4,72,82,4,4,166,166,0,63,103
