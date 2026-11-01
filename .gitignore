@@ -5,3 +5,8 @@
 sbom_scanner_results/
 scanner_results/
 syft-sboms/
+
+# Ignore server binary
+go/hello-server
+evidence/bin/
+keys/

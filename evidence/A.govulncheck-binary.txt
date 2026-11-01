@@ -1,0 +1,744 @@
+=== Symbol Results ===
+
+Vulnerability #1: GO-2026-6809
+    Distrust compromised intermediate certificates in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2026-6809
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.26.10
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+
+Vulnerability #2: GO-2026-6617
+    HTTP/2 server crash due to HPACK encoder race in net/http
+  More info: https://pkg.go.dev/vuln/GO-2026-6617
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.60.0
+    Vulnerable symbols found:
+      #1: http2.ConnectionError.Error
+      #2: http2.ErrCode.String
+      #3: http2.FrameHeader.String
+      #4: http2.FrameType.String
+      #5: http2.FrameWriteRequest.String
+      Use '-show traces' to see the other 36 found symbols
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.26.9
+    Vulnerable symbols found:
+      #1: http.CanonicalHeaderKey
+      #2: http.CanonicalHeaderKey
+      #3: http.Error
+      #4: http.Error
+      #5: http.HandlerFunc.ServeHTTP
+      Use '-show traces' to see the other 153 found symbols
+
+Vulnerability #3: GO-2026-6613
+    HTTP/1 server connection desynchronization after 2xx CONNECT response in
+    net/http
+  More info: https://pkg.go.dev/vuln/GO-2026-6613
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.26.9
+    Vulnerable symbols found:
+      #1: http.CanonicalHeaderKey
+      #2: http.Error
+      #3: http.HandlerFunc.ServeHTTP
+      #4: http.Header.Add
+      #5: http.Header.Del
+      Use '-show traces' to see the other 34 found symbols
+
+Vulnerability #4: GO-2026-6612
+    Double flow control refund on HTTP/2 server streams in net/http
+  More info: https://pkg.go.dev/vuln/GO-2026-6612
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.60.0
+    Vulnerable symbols found:
+      #1: http2.ConnectionError.Error
+      #2: http2.ErrCode.String
+      #3: http2.FrameHeader.String
+      #4: http2.FrameType.String
+      #5: http2.FrameWriteRequest.String
+      Use '-show traces' to see the other 36 found symbols
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.26.9
+    Vulnerable symbols found:
+      #1: http.CanonicalHeaderKey
+      #2: http.CanonicalHeaderKey
+      #3: http.Error
+      #4: http.Error
+      #5: http.HandlerFunc.ServeHTTP
+      Use '-show traces' to see the other 153 found symbols
+
+Vulnerability #5: GO-2026-6611
+    Excessive CPU consumption from repeated initial window changes in net/http
+  More info: https://pkg.go.dev/vuln/GO-2026-6611
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.60.0
+    Vulnerable symbols found:
+      #1: http2.ConnectionError.Error
+      #2: http2.ErrCode.String
+      #3: http2.FrameHeader.String
+      #4: http2.FrameType.String
+      #5: http2.FrameWriteRequest.Consume
+      Use '-show traces' to see the other 38 found symbols
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.26.9
+    Vulnerable symbols found:
+      #1: http.CanonicalHeaderKey
+      #2: http.CanonicalHeaderKey
+      #3: http.Error
+      #4: http.Error
+      #5: http.HandlerFunc.ServeHTTP
+      Use '-show traces' to see the other 157 found symbols
+
+Vulnerability #6: GO-2026-6608
+    Memory limit bypass when parsing MIME headers in net/textproto,
+    mime/multipart
+  More info: https://pkg.go.dev/vuln/GO-2026-6608
+  Standard library
+    Found in: net/textproto@go1.18.10
+    Fixed in: net/textproto@go1.26.9
+    Vulnerable symbols found:
+      #1: textproto.Reader.ReadMIMEHeader
+
+Vulnerability #7: GO-2026-6607
+    Reject malformed ECH outer extension references in crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2026-6607
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.26.9
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #8: GO-2026-6603
+    HTTP/2 server memory exhaustion due to Trailer headers in net/http
+  More info: https://pkg.go.dev/vuln/GO-2026-6603
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.60.0
+    Vulnerable symbols found:
+      #1: http2.ConnectionError.Error
+      #2: http2.ErrCode.String
+      #3: http2.FrameHeader.String
+      #4: http2.FrameType.String
+      #5: http2.FrameWriteRequest.String
+      Use '-show traces' to see the other 36 found symbols
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.26.9
+    Vulnerable symbols found:
+      #1: http.CanonicalHeaderKey
+      #2: http.CanonicalHeaderKey
+      #3: http.Error
+      #4: http.Error
+      #5: http.HandlerFunc.ServeHTTP
+      Use '-show traces' to see the other 153 found symbols
+
+Vulnerability #9: GO-2026-6600
+    Recognize yield as regexp preceder keyword in html/template
+  More info: https://pkg.go.dev/vuln/GO-2026-6600
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.26.9
+    Vulnerable symbols found:
+      #1: template.nextJSCtx
+      #2: template.tJS
+
+Vulnerability #10: GO-2026-6091
+    Fix Javascript regexp context tracking in html/template
+  More info: https://pkg.go.dev/vuln/GO-2026-6091
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.25.13
+    Vulnerable symbols found:
+      #1: template.tJS
+
+Vulnerability #11: GO-2026-6090
+    Limit handshake messages we are willing to accept post-handshake in
+    crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2026-6090
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.25.13
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #12: GO-2026-6089
+    Apply ReadHeaderTimeout when doing unencrypted HTTP/2 check in net/http
+  More info: https://pkg.go.dev/vuln/GO-2026-6089
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.25.13
+    Vulnerable symbols found:
+      #1: http.ListenAndServe
+      #2: http.Server.ListenAndServe
+      #3: http.Server.Serve
+
+Vulnerability #13: GO-2026-5972
+    Enforce maximum recursion depth in encoding/asn1
+  More info: https://pkg.go.dev/vuln/GO-2026-5972
+  Standard library
+    Found in: encoding/asn1@go1.18.10
+    Fixed in: encoding/asn1@go1.25.13
+    Vulnerable symbols found:
+      #1: asn1.Unmarshal
+      #2: asn1.UnmarshalWithParams
+
+Vulnerability #14: GO-2026-5856
+    Invoking Encrypted Client Hello privacy leak in crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2026-5856
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.25.12
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #15: GO-2026-5039
+    Arbitrary inputs are included in errors without any escaping in
+    net/textproto
+  More info: https://pkg.go.dev/vuln/GO-2026-5039
+  Standard library
+    Found in: net/textproto@go1.18.10
+    Fixed in: net/textproto@go1.25.11
+    Vulnerable symbols found:
+      #1: textproto.Reader.ReadMIMEHeader
+
+Vulnerability #16: GO-2026-5037
+    Inefficient candidate hostname parsing in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2026-5037
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.25.11
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+      #2: x509.Certificate.VerifyHostname
+      #3: x509.HostnameError.Error
+
+Vulnerability #17: GO-2026-4971
+    Panic in Dial and LookupPort when handling NUL byte on Windows in net
+  More info: https://pkg.go.dev/vuln/GO-2026-4971
+  Standard library
+    Found in: net@go1.18.10
+    Fixed in: net@go1.25.10
+    Vulnerable symbols found:
+      #1: net.Dialer.DialContext
+      #2: net.Listen
+      #3: net.ListenConfig.Listen
+      #4: net.ResolveIPAddr
+      #5: net.ResolveTCPAddr
+      Use '-show traces' to see the other 2 found symbols
+
+Vulnerability #18: GO-2026-4947
+    Unexpected work during chain building in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2026-4947
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.25.9
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+
+Vulnerability #19: GO-2026-4946
+    Inefficient policy validation in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2026-4946
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.25.9
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+
+Vulnerability #20: GO-2026-4870
+    Unauthenticated TLS 1.3 KeyUpdate record can cause persistent connection
+    retention and DoS in crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2026-4870
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.25.9
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #21: GO-2026-4865
+    JsBraceDepth Context Tracking Bugs (XSS) in html/template
+  More info: https://pkg.go.dev/vuln/GO-2026-4865
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.25.9
+    Vulnerable symbols found:
+      #1: template.Template.Parse
+
+Vulnerability #22: GO-2026-4603
+    URLs in meta content attribute actions are not escaped in html/template
+  More info: https://pkg.go.dev/vuln/GO-2026-4603
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.25.8
+    Vulnerable symbols found:
+      #1: template.tTag
+
+Vulnerability #23: GO-2026-4602
+    FileInfo can escape from a Root in os
+  More info: https://pkg.go.dev/vuln/GO-2026-4602
+  Standard library
+    Found in: os@go1.18.10
+    Fixed in: os@go1.25.8
+    Vulnerable symbols found:
+      #1: os.File.ReadDir
+      #2: os.ReadDir
+
+Vulnerability #24: GO-2026-4601
+    Incorrect parsing of IPv6 host literals in net/url
+  More info: https://pkg.go.dev/vuln/GO-2026-4601
+  Standard library
+    Found in: net/url@go1.18.10
+    Fixed in: net/url@go1.25.8
+    Vulnerable symbols found:
+      #1: url.Parse
+      #2: url.ParseRequestURI
+      #3: url.URL.UnmarshalBinary
+
+Vulnerability #25: GO-2026-4340
+    Handshake messages may be processed at the incorrect encryption level in
+    crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2026-4340
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.24.12
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #26: GO-2026-4337
+    Unexpected session resumption in crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2026-4337
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.24.13
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #27: GO-2025-4175
+    Improper application of excluded DNS name constraints when verifying
+    wildcard names in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2025-4175
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.24.11
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+
+Vulnerability #28: GO-2025-4155
+    Excessive resource consumption when printing error string for host
+    certificate validation in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2025-4155
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.24.11
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+      #2: x509.Certificate.VerifyHostname
+
+Vulnerability #29: GO-2025-4013
+    Panic when validating certificates with DSA public keys in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2025-4013
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.24.8
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+
+Vulnerability #30: GO-2025-4011
+    Parsing DER payload can cause memory exhaustion in encoding/asn1
+  More info: https://pkg.go.dev/vuln/GO-2025-4011
+  Standard library
+    Found in: encoding/asn1@go1.18.10
+    Fixed in: encoding/asn1@go1.24.8
+    Vulnerable symbols found:
+      #1: asn1.Unmarshal
+      #2: asn1.UnmarshalWithParams
+
+Vulnerability #31: GO-2025-4010
+    Insufficient validation of bracketed IPv6 hostnames in net/url
+  More info: https://pkg.go.dev/vuln/GO-2025-4010
+  Standard library
+    Found in: net/url@go1.18.10
+    Fixed in: net/url@go1.24.8
+    Vulnerable symbols found:
+      #1: url.Parse
+      #2: url.ParseRequestURI
+      #3: url.URL.UnmarshalBinary
+
+Vulnerability #32: GO-2025-4009
+    Quadratic complexity when parsing some invalid inputs in encoding/pem
+  More info: https://pkg.go.dev/vuln/GO-2025-4009
+  Standard library
+    Found in: encoding/pem@go1.18.10
+    Fixed in: encoding/pem@go1.24.8
+    Vulnerable symbols found:
+      #1: pem.Decode
+
+Vulnerability #33: GO-2025-4008
+    ALPN negotiation error contains attacker controlled information in
+    crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2025-4008
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.24.8
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #34: GO-2025-4007
+    Quadratic complexity when checking name constraints in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2025-4007
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.24.9
+    Vulnerable symbols found:
+      #1: x509.CertPool.AppendCertsFromPEM
+      #2: x509.Certificate.CheckSignatureFrom
+      #3: x509.Certificate.Verify
+      #4: x509.ParseCertificate
+
+Vulnerability #35: GO-2025-3563
+    Request smuggling due to acceptance of invalid chunked data in net/http
+  More info: https://pkg.go.dev/vuln/GO-2025-3563
+  Standard library
+    Found in: net/http/internal@go1.18.10
+    Fixed in: net/http/internal@go1.23.8
+    Vulnerable symbols found:
+      #1: internal.chunkedReader.Read
+
+Vulnerability #36: GO-2025-3503
+    HTTP Proxy bypass using IPv6 Zone IDs in golang.org/x/net
+  More info: https://pkg.go.dev/vuln/GO-2025-3503
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.36.0
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.23.7
+    Vulnerable symbols found:
+      #1: http.ProxyFromEnvironment
+
+Vulnerability #37: GO-2025-3373
+    Usage of IPv6 zone IDs can bypass URI name constraints in crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2025-3373
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.22.11
+    Vulnerable symbols found:
+      #1: x509.CertPool.AppendCertsFromPEM
+      #2: x509.Certificate.CheckSignatureFrom
+      #3: x509.Certificate.Verify
+      #4: x509.Certificate.VerifyHostname
+      #5: x509.HostnameError.Error
+      Use '-show traces' to see the other 1 found symbols
+
+Vulnerability #38: GO-2024-2687
+    HTTP/2 CONTINUATION flood in net/http
+  More info: https://pkg.go.dev/vuln/GO-2024-2687
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.23.0
+    Vulnerable symbols found:
+      #1: http2.ConnectionError.Error
+      #2: http2.ErrCode.String
+      #3: http2.FrameHeader.String
+      #4: http2.FrameType.String
+      #5: http2.FrameWriteRequest.String
+      Use '-show traces' to see the other 36 found symbols
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.21.9
+    Vulnerable symbols found:
+      #1: http.CanonicalHeaderKey
+      #2: http.Error
+      #3: http.HandlerFunc.ServeHTTP
+      #4: http.Header.Add
+      #5: http.Header.Del
+      Use '-show traces' to see the other 76 found symbols
+
+Vulnerability #39: GO-2024-2610
+    Errors returned from JSON marshaling may break template escaping in
+    html/template
+  More info: https://pkg.go.dev/vuln/GO-2024-2610
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.21.8
+    Vulnerable symbols found:
+      #1: template.jsValEscaper
+
+Vulnerability #40: GO-2024-2599
+    Memory exhaustion in multipart form parsing in net/textproto and net/http
+  More info: https://pkg.go.dev/vuln/GO-2024-2599
+  Standard library
+    Found in: net/textproto@go1.18.10
+    Fixed in: net/textproto@go1.21.8
+    Vulnerable symbols found:
+      #1: textproto.Reader.ReadLine
+      #2: textproto.Reader.ReadMIMEHeader
+
+Vulnerability #41: GO-2024-2598
+    Verify panics on certificates with an unknown public key algorithm in
+    crypto/x509
+  More info: https://pkg.go.dev/vuln/GO-2024-2598
+  Standard library
+    Found in: crypto/x509@go1.18.10
+    Fixed in: crypto/x509@go1.21.8
+    Vulnerable symbols found:
+      #1: x509.Certificate.Verify
+
+Vulnerability #42: GO-2023-2382
+    Denial of service via chunk extensions in net/http
+  More info: https://pkg.go.dev/vuln/GO-2023-2382
+  Standard library
+    Found in: net/http/internal@go1.18.10
+    Fixed in: net/http/internal@go1.20.12
+    Vulnerable symbols found:
+      #1: internal.chunkedReader.Read
+
+Vulnerability #43: GO-2023-2375
+    Before Go 1.20, the RSA based key exchange methods in crypto/tls may exhibit
+    a timing side channel
+  More info: https://pkg.go.dev/vuln/GO-2023-2375
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.20
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #44: GO-2023-2102
+    HTTP/2 rapid reset can cause excessive work in net/http
+  More info: https://pkg.go.dev/vuln/GO-2023-2102
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.17.0
+    Vulnerable symbols found:
+      #1: http2.Server.ServeConn
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.20.10
+    Vulnerable symbols found:
+      #1: http.ListenAndServe
+      #2: http.Server.ListenAndServe
+      #3: http.Server.Serve
+      #4: http.http2Server.ServeConn
+
+Vulnerability #45: GO-2023-2043
+    Improper handling of special tags within script contexts in html/template
+  More info: https://pkg.go.dev/vuln/GO-2023-2043
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.20.8
+    Vulnerable symbols found:
+      #1: template.indexTagEnd
+      #2: template.tSpecialTagEnd
+
+Vulnerability #46: GO-2023-2041
+    Improper handling of HTML-like comments in script contexts in html/template
+  More info: https://pkg.go.dev/vuln/GO-2023-2041
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.20.8
+    Vulnerable symbols found:
+      #1: template.tJS
+      #2: template.tLineCmt
+
+Vulnerability #47: GO-2023-1987
+    Large RSA keys can cause high CPU usage in crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2023-1987
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.19.12
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #48: GO-2023-1840
+    Unsafe behavior in setuid/setgid binaries in runtime
+  More info: https://pkg.go.dev/vuln/GO-2023-1840
+  Standard library
+    Found in: runtime@go1.18.10
+    Fixed in: runtime@go1.19.10
+    Vulnerable symbols found:
+      #1: runtime.Caller
+      #2: runtime.Callers
+      #3: runtime.CallersFrames
+      #4: runtime.Frames.Next
+      #5: runtime.Func.Entry
+      Use '-show traces' to see the other 15 found symbols
+
+Vulnerability #49: GO-2023-1753
+    Improper handling of empty HTML attributes in html/template
+  More info: https://pkg.go.dev/vuln/GO-2023-1753
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.19.9
+    Vulnerable symbols found:
+      #1: template.htmlNospaceEscaper
+
+Vulnerability #50: GO-2023-1752
+    Improper handling of JavaScript whitespace in html/template
+  More info: https://pkg.go.dev/vuln/GO-2023-1752
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.19.9
+    Vulnerable symbols found:
+      #1: template.nextJSCtx
+
+Vulnerability #51: GO-2023-1751
+    Improper sanitization of CSS values in html/template
+  More info: https://pkg.go.dev/vuln/GO-2023-1751
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.19.9
+    Vulnerable symbols found:
+      #1: template.cssValueFilter
+
+Vulnerability #52: GO-2023-1705
+    Excessive resource consumption in net/http, net/textproto and mime/multipart
+  More info: https://pkg.go.dev/vuln/GO-2023-1705
+  Standard library
+    Found in: net/textproto@go1.18.10
+    Fixed in: net/textproto@go1.19.8
+    Vulnerable symbols found:
+      #1: textproto.Reader.ReadMIMEHeader
+
+Vulnerability #53: GO-2023-1704
+    Excessive memory allocation in net/http and net/textproto
+  More info: https://pkg.go.dev/vuln/GO-2023-1704
+  Standard library
+    Found in: net/textproto@go1.18.10
+    Fixed in: net/textproto@go1.19.8
+    Vulnerable symbols found:
+      #1: textproto.Reader.ReadMIMEHeader
+
+Vulnerability #54: GO-2023-1703
+    Backticks not treated as string delimiters in html/template
+  More info: https://pkg.go.dev/vuln/GO-2023-1703
+  Standard library
+    Found in: html/template@go1.18.10
+    Fixed in: html/template@go1.19.8
+    Vulnerable symbols found:
+      #1: template.tJS
+      #2: template.tJSDelimited
+
+Vulnerability #55: GO-2023-1571
+    Denial of service via crafted HTTP/2 stream in net/http and golang.org/x/net
+  More info: https://pkg.go.dev/vuln/GO-2023-1571
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.7.0
+    Vulnerable symbols found:
+      #1: hpack.Decoder.Write
+      #2: http2.ConnectionError.Error
+      #3: http2.ErrCode.String
+      #4: http2.FrameHeader.String
+      #5: http2.FrameType.String
+      Use '-show traces' to see the other 37 found symbols
+
+  Standard library
+    Found in: net/http@go1.18.10
+    Fixed in: net/http@go1.19.6
+    Vulnerable symbols found:
+      #1: http.ListenAndServe
+      #2: http.Server.ListenAndServe
+      #3: http.Server.Serve
+
+Vulnerability #56: GO-2023-1570
+    Panic on large handshake records in crypto/tls
+  More info: https://pkg.go.dev/vuln/GO-2023-1570
+  Standard library
+    Found in: crypto/tls@go1.18.10
+    Fixed in: crypto/tls@go1.19.6
+    Vulnerable symbols found:
+      #1: tls.Conn.Handshake
+      #2: tls.Conn.HandshakeContext
+      #3: tls.Conn.Read
+      #4: tls.Conn.Write
+
+Vulnerability #57: GO-2022-1144
+    Excessive memory growth in net/http and golang.org/x/net/http2
+  More info: https://pkg.go.dev/vuln/GO-2022-1144
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.4.0
+    Vulnerable symbols found:
+      #1: http2.Server.ServeConn
+
+Vulnerability #58: GO-2022-0969
+    Denial of service in net/http and golang.org/x/net/http2
+  More info: https://pkg.go.dev/vuln/GO-2022-0969
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.0.0-20220906165146-f3363e06e74c
+    Vulnerable symbols found:
+      #1: http2.Server.ServeConn
+
+Vulnerability #59: GO-2022-0288
+    Unbounded memory growth in net/http and golang.org/x/net/http2
+  More info: https://pkg.go.dev/vuln/GO-2022-0288
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.0.0-20211209124913-491a49abca63
+    Vulnerable symbols found:
+      #1: http2.Server.ServeConn
+
+Vulnerability #60: GO-2022-0236
+    Panic due to large headers in net/http and golang.org/x/net/http/httpguts
+  More info: https://pkg.go.dev/vuln/GO-2022-0236
+  Module: golang.org/x/net
+    Found in: golang.org/x/net@v0.0.0-20210226172049-e18ecbb05110
+    Fixed in: golang.org/x/net@v0.0.0-20210428140749-89ef3d95e781
+    Vulnerable symbols found:
+      #1: httpguts.HeaderValuesContainsToken
+
+Vulnerability #61: GO-2021-0113
+    Out-of-bounds read in golang.org/x/text/language
+  More info: https://pkg.go.dev/vuln/GO-2021-0113
+  Module: golang.org/x/text
+    Found in: golang.org/x/text@v0.3.6
+    Fixed in: golang.org/x/text@v0.3.7
+    Vulnerable symbols found:
+      #1: language.Parse
+
+Your code is affected by 61 vulnerabilities from 2 modules and the Go standard library.
+This scan also found 32 vulnerabilities in packages you import and 55
+vulnerabilities in modules you require, but your code doesn't appear to call
+these vulnerabilities.
+Use '-show verbose' for more details.

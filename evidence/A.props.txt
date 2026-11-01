@@ -1,0 +1,10 @@
+image: hello:a-baseline
+image_id: sha256:f99506e782255b3f575229e89d4202e12e0df50237f3869321fb0c68b06c8edd   # local image ID; the registry digest exists only after a push
+size_bytes: 1486537453
+layers: 11
+user: ''  (empty = root)
+entrypoint: null  cmd: ["/app/hello-server"]
+shell_present: yes
+syft_total_packages: 259
+syft_os_packages: 201
+libc_packages: libc6
