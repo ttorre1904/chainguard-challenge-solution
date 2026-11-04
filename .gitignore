@@ -10,3 +10,6 @@ syft-sboms/
 go/hello-server
 evidence/bin/
 keys/
+FINDINGS.pre-populate.md
+REVIEW-NOTES.md
+CLAUDE.md

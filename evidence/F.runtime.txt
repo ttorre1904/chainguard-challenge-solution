@@ -1,0 +1,22 @@
+label: F   image: hello:f-hardened   date: 2026-11-01T18:46:09Z
+extra docker run flags: --read-only --cap-drop=ALL --security-opt=no-new-privileges:true --pids-limit=100 --memory=128m --cpus=0.5 -e GIN_MODE=release
+--- endpoint
+HTTP 200
+Hello World!
+--- configured user: '65532' (empty = image default)
+--- docker host config
+ReadonlyRootfs=true CapDrop=[ALL] SecurityOpt=[no-new-privileges:true] Memory=134217728 PidsLimit=100 NanoCpus=500000000
+--- what the Linux kernel says about the app process (host PID 24317)
+Uid:	65532	65532	65532	65532
+Gid:	65532	65532	65532	65532
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	0000000000000000
+CapAmb:	0000000000000000
+NoNewPrivs:	1
+Seccomp:	2
+--- shell exec attempt
+OCI runtime exec failed: exec failed: unable to start container process: exec: "sh": executable file not found in $PATH
+--- time to stop (graceful SIGTERM handling)
+real	0m0.131s

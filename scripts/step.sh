@@ -5,14 +5,16 @@
 set -euo pipefail
 trap 'echo "!! step.sh stopped at line $LINENO while running: $BASH_COMMAND" >&2' ERR
 
+# Check tools are installed
 ID="${1:?id, e.g. A}"; LABEL="${2:?label}"; DF="${3:?dockerfile or -}"; shift 3
 cd "$(dirname "$0")/.."
 for t in docker jq syft grype trivy go govulncheck; do
   command -v "$t" >/dev/null || { echo "!! missing tool: $t (install it first; see Phase 4)" >&2; exit 1; }
 done
 LID=$(echo "$ID" | tr '[:upper:]' '[:lower:]')
-IMG="hello:${LID}-${LABEL}"; E="evidence/${ID}"; mkdir -p evidence/bin
+IMG="hello:${LID}-${LABEL}"; E="evidence/${ID}"; mkdir -p evidence/bin # name image and evidence files prefix based on ID (e.g. hello:a-baseline)
 
+# Docker build
 if [ "$DF" != "-" ]; then
   echo "==> [$ID] cold build (no cache): $IMG"
   t0=$(date +%s); docker build --provenance=false --no-cache -f "docker/$DF" -t "$IMG" "$@" go/; t1=$(date +%s)
@@ -22,6 +24,7 @@ if [ "$DF" != "-" ]; then
     echo "cmd: docker build --provenance=false -f docker/$DF -t $IMG $* go/"; } > "$E.build.txt"
 fi
 
+# SBOM and image properties
 echo "==> [$ID] image properties"
 syft "$IMG" -o json > "$E.syft.json" 2> "$E.syft.log"
 { echo "image: $IMG"
@@ -37,9 +40,11 @@ syft "$IMG" -o json > "$E.syft.json" 2> "$E.syft.log"
 } > "$E.props.txt"
 echo "   $(grep -E '^(size_bytes|layers|user|shell_present|syft_total_packages|syft_os_packages):' "$E.props.txt" | tr '\n' ' ')"
 
+# Update scanner databases
 echo "==> [$ID] vulnerability databases"
 grype db update > "$E.db-update.log" 2>&1 || echo "   (grype db update reported a problem; see $E.db-update.log)"
 
+# Run security scans
 echo "==> [$ID] scans"
 # Informational commands must never abort the run: '|| true' on the producer, 'sed -n' instead of 'head'.
 { echo "date_utc: $(date -u +%FT%TZ)"; echo "image: $IMG"
@@ -50,6 +55,7 @@ echo "==> [$ID] scans"
   echo "cmd: trivy image --quiet --format json --output $E.trivy.json $IMG"
 } > "$E.scan-meta.txt"
 
+# Check security scans ran successfully
 if ! grype "$IMG" -o json > "$E.grype.json" 2> "$E.grype.log"; then
   echo "!! grype failed. Last lines of $E.grype.log:" >&2; tail -n 20 "$E.grype.log" >&2; exit 1
 fi
@@ -60,6 +66,7 @@ fi
 [ -s "$E.trivy.json" ] || { echo "!! trivy wrote an empty file; see $E.trivy.log" >&2; exit 1; }
 echo "   findings: grype=$(jq '(.matches // []) | length' "$E.grype.json")  trivy=$(jq '[.Results[]?.Vulnerabilities[]?] | length' "$E.trivy.json")"
 
+# document buildinfo and govulncheck reachability analysis
 echo "==> [$ID] Go build info and reachability (binary mode)"
 BIN="evidence/bin/${ID}-hello-server"; rm -f "$BIN"
 cid=$(docker create "$IMG")

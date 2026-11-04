@@ -1,0 +1,22 @@
+label: E   image: hello:e-chainguard   date: 2026-11-01T18:45:46Z
+extra docker run flags: 
+--- endpoint
+HTTP 200
+Hello World!
+--- configured user: '65532' (empty = image default)
+--- docker host config
+ReadonlyRootfs=false CapDrop=<no value> SecurityOpt=<no value> Memory=0 PidsLimit=<no value> NanoCpus=0
+--- what the Linux kernel says about the app process (host PID 24013)
+Uid:	65532	65532	65532	65532
+Gid:	65532	65532	65532	65532
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	00000000a80425fb
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	2
+--- shell exec attempt
+OCI runtime exec failed: exec failed: unable to start container process: exec: "sh": executable file not found in $PATH
+--- time to stop (graceful SIGTERM handling)
+real	0m0.152s
